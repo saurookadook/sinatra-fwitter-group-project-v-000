@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+  use Rack::Flash
+
   # get '/signup' do
   #
   # end
@@ -9,7 +11,7 @@ class UsersController < ApplicationController
   # end
 
   get '/users/' do
-    
+
   end
 
 end
