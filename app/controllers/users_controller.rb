@@ -8,6 +8,8 @@ class UsersController < ApplicationController
   #
   # end
 
-  get '/users/'
+  get '/users/' do
+    
+  end
 
 end
