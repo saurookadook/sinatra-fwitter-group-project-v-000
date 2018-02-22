@@ -12,7 +12,14 @@ class TweetsController < ApplicationController
   end
 
   get '/tweets/new' do
-    
+    # abstract this
+    if logged_in?
+      @current_user = current_user
+    else
+      flash[:message] = "Please log in to view tweets."
+      redirect to "/login"
+    end
+    erb :"tweets/new"
   end
 
 end
