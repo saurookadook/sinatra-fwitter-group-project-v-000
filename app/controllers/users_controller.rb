@@ -10,8 +10,9 @@ class UsersController < ApplicationController
   #
   # end
 
-  get '/users/' do
-
+  get '/users/:slug' do
+    @current_user = User.find_by_slug(params[:slug])
+    erb :"users/show"
   end
 
 end

@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   # extend Helpifiable
 
-  # validates_presence_of :username, :email, :password ???
+  validates_presence_of :username, :email, :password
 
   has_many :tweets
   has_secure_password
