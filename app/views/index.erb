@@ -1,6 +1,7 @@
 <h1>Welcome to Fwitter</h1><br>
 
-
+<p><a href="/signup">Sign Up!</a></p><br>
+<p><a href="/login">Log In!</a></p><br>
 
 <h2>Fweets!</h2>
 
@@ -10,7 +11,7 @@
   <% @users.each do |user| %>
     <li><h3><%= user.username %></h3>
       <% @tweets.each do |tweet| %>
-        <p><%= tweet.create_at %>: <%= tweet.content %></p>
+        <p><%= tweet.created_at %>: <%= tweet.content %></p>
       <% end %>
     </li><br>
   <% end %>
