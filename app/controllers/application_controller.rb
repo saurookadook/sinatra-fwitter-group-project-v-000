@@ -16,11 +16,16 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/signup' do
-
+    erb :"users/create_user"
   end
 
   get '/login' do
 
+  end
+
+  post '/signup' do
+
+    redirect to "/tweets"
   end
 
 end
