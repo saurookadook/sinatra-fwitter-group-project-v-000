@@ -16,6 +16,14 @@ class ApplicationController < Sinatra::Base
       !current_user.nil?
     end
 
+    def verify_user
+      if logged_in?
+        current_user
+      else
+        flash[:message] = "Please log in to view tweets."
+        redirect to "/login"
+      end
+    end
     # def login(params)
     #   user = User.find_by(params)
     #   if user && user.authenticate(params[:password])
