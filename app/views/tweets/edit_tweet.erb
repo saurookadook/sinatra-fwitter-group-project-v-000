@@ -1,5 +1,5 @@
-<h1>Edit Tweet #<%= @tweet.id %></h1><br>
-<h2>Tweeter: <%= @current_user.username %></h2><br>
+<h1>Edit Fweet #<%= @tweet.id %></h1><br>
+<h2>Fweeter: <%= @current_user.username %></h2><br>
 <form method="POST" action="/tweets/<%= @tweet.id %>">
   <input id="hidden" type="hidden" name="_method" value="PATCH">
   <label for="content">Content: </label><input type="text" name="content" id="content" value="<%= @tweet.content %>"><br>
