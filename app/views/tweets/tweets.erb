@@ -2,6 +2,7 @@
 <a href="/logout">Logout</a><br>
 <a href="/tweets/new">Create a Fweet!</a><br>
 
+<h2>Recent Fweets:</h2><br>
 <% @tweets.each do |tweet| %>
   <ul>
     <li><%= tweet.content %></li><br>
