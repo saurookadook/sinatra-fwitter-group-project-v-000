@@ -16,6 +16,3 @@ class UsersController < ApplicationController
   end
 
 end
-
-# <% if @tweet.user_id == session[:user_id] %>
-# <% end %>
