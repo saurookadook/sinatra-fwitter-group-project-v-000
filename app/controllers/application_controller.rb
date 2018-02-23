@@ -24,12 +24,6 @@ class ApplicationController < Sinatra::Base
         redirect to "/login"
       end
     end
-    # def login(params)
-    #   user = User.find_by(params)
-    #   if user && user.authenticate(params[:password])
-    #     session[:user_id] = user.id
-    #   end
-    # end
 
     def current_user
       @current_user ||= User.find_by_id(session[:user_id]) if session[:user_id]
@@ -41,7 +35,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/' do
-    @users = User.all
+    @current_user = current_user
     @tweets = Tweet.all
     erb :index
   end
