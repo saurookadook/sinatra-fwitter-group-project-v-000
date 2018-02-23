@@ -10,7 +10,7 @@
 <ul>
     <li><p><b><%= user.username %></b></p>
       <% @tweets.each do |tweet| %>
-        <p><b>Created by: <%= tweet.user %></b> <%= tweet.created_at %>: <%= tweet.content %></p>
+        <p><b>Created by: <%= tweet.user %></b> at <%= tweet.created_at %>: <%= tweet.content %></p>
       <% end %>
     </li><br>
 </ul>
